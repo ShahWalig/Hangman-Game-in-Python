@@ -1,14 +1,14 @@
 import random
 from hangman_shape import hangman,half_hangman,more_half_hangman, half_less_hangman, hangman_1
+from wrods import english_words
 
 
 underscore = []
 lives = 5
 game_over = False
-words_list = ['cat', 'hotdog', 'horse']
+words_list = english_words
 
 chosen_word = random.choice(words_list)
-print(chosen_word)
 
 for i in chosen_word:
     underscore += '_'
