@@ -1,7 +1,6 @@
 import random
-from hangman_shape import hangman,half_hangman,more_half_hangman, half_less_hangman, hangman_1
-from wrods import english_words
-
+from hangman_shape import hangman, half_hangman, more_half_hangman, half_less_hangman, hangman_1
+from words import english_words
 
 underscore = []
 lives = 5
@@ -28,20 +27,17 @@ while not game_over:
             if lives == 0:
                 print("Woo Yar! You have Lose the game! ")
                 game_over = True
-        if lives ==4:
+        if lives == 4:
             print(hangman_1)
 
-        if lives ==3:
-           print(half_less_hangman)
+        if lives == 3:
+            print(half_less_hangman)
         if lives == 2:
             print(more_half_hangman)
-        if lives ==1:
+        if lives == 1:
             print(half_hangman)
-        if lives ==0:
-          print(hangman)
-
-
-
+        if lives == 0:
+            print(hangman)
 
         else:
             if '_' not in underscore:
@@ -50,6 +46,3 @@ while not game_over:
                 game_over = True
     else:
         print("You have already type this letter")
-
-
-
